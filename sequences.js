@@ -126,18 +126,27 @@ function mouseover(d) {
   var sequenceArray = getAncestors(d);
   updateBreadcrumbs(sequenceArray, percentageString);
 
+  var account = document.querySelectorAll('#main .test').length;
+  var test_idnumber = account + 1;
+
     var g = d3.select("#client")
         .selectAll("sequenceArray")
         .data(sequenceArray, function(d) { return d.name + d.depth; })
 
-        var entering = g.enter().append("span")
-            .attr("id", "test");
+    var entering = g.enter().append("span")
+        .attr("class", "test")
+        .attr("id", "test_idnumber")
+        .text(function(d) {
+          var test = d.name.substr(0,6)
+          if (test === "Client") {
+            if (test_idnumber > 1) {
+              d3.selectAll(".test").remove();
+            }
+            return d.name;
+          }
 
-        var account = document.querySelectorAll('#main #test').length;;
+        });
 
-       if (sequenceArray.indexOf(d) === 0 && account < 3) {
-            entering.text(function(sequenceArray) { return d.name; })
-        };
 
 
   // Fade all the segments.
@@ -171,7 +180,7 @@ function mouseleave(d) {
               d3.select(this).on("mouseover", mouseover);
             });
 
-  d3.selectAll("#test").remove();
+  d3.selectAll(".test").remove();
 
   d3.select("#explanation")
       .style("visibility", "hidden");
