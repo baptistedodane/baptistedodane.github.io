@@ -42,9 +42,9 @@ body {
 
 #explanation {
   position: absolute;
-  top: 233px;
-  left: 385px;
-  width: 170px;
+  top: 245px;
+  left: 378px;
+  width: 195px;
   text-align: center;
   color: #666;
   z-index: -1;
