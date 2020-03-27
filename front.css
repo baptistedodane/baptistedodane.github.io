@@ -1,0 +1,85 @@
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  padding-left: 0;	
+}
+ol li {
+  counter-increment: my-awesome-counter;
+  line-height: 3rem;	
+}
+
+ol li::before {
+  content: "0" counter(my-awesome-counter);
+	font-family: Futura PT, Muli, sans-serif;
+	font-size: 2rem;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bolder;
+	margin-right: 0.7rem;
+  line-height: 1;
+	color: #FDCC59;
+	margin-left:-1.3em;
+	
+}
+
+
+.hs_submit {
+	margin-top: 20px;
+}
+.hs-form-field {
+	font-family: Futura PT, Muli, sans-serif ;
+	outline: none;
+	display: block;
+	padding: 7px;
+}
+.hs-form-field label {
+	display: block !important; font-family: Futura PT, Muli, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: bolder; line-height: 20px;
+}
+.hs-form input[type="email"], .hs-form input[type="tel"], .hs-form input[type="text"], .hs-form input[type="number"] {
+	font-family: Futura PT, Muli, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: lighter;
+	outline: none;
+	display: block;
+	padding: 7px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+}
+
+
+.hs-form .hs-form-required { display: none !important; } 
+.hs-error-msgs label, .hs-form textarea, .hs-form select { font-family: Futura PT, Muli, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; color : #0233A6}
+.hs-form .actions { text-align: center; }
+	::-webkit-input-placeholder {
+		font-family: Futura PT, Muli, sans-serif;
+		font-size: 18px; font-style: normal;
+		font-variant: normal;
+		font-weight: lighter ;
+		color: grey ;}
+
+.hs-form .hs-button {
+	background-color: #FFFFFF !important;
+	letter-spacing: 0px;
+	padding: 10px 10px 10px 10px !important;
+	text-align: center;
+	font-family: 'Futura PT' !important;
+	font-weight: bolder !important;
+	font-size: 16px !important;
+	color: #0233A6 !important;
+	text-decoration: none;
+	vertical-align: middle;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	text-transform: uppercase !important;
+	line-height: 1rem !important;
+	border: 2px solid #FDCC59;
+	width: 200px !important;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
